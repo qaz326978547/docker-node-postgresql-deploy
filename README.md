@@ -147,7 +147,7 @@ JWT_SECRET=hexschool666
 ```
 
 - 啟動指令 - 自動建立環境並運行環境 - docker compose --env-file .env up -d
-- POSTMAN 　 API 測試 - 註冊、登入、取得個人資料
+- POSTMAN API 測試 - 註冊、登入、取得個人資料
 
 ## 參考資訊
 
