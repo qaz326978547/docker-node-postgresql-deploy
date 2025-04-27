@@ -73,26 +73,28 @@ JWT_SECRET=hexschool666
 - 安裝 Docker - 直接複製貼上執行 - https://docs.docker.com/engine/install/ubuntu/
 - 虛擬主機將 docker hub image ${docker hub 帳號}/bootcamp-fitness 抓下來 - docker pull ${docker hub 帳號}/bootcamp-fitness
 - 虛擬主機 - 建立 .env 檔案
-  '''
+
+```
   POSTGRES_USER=testHexschool
   POSTGRES_PASSWORD=pgStartkit4test
   POSTGRES_DB=test
 
-DB_HOST=postgres
-DB_PORT=5432
-DB_USERNAME=testHexschool
-DB_PASSWORD=pgStartkit4test
-DB_DATABASE=test
-DB_SYNCHRONIZE=true
-DB_ENABLE_SSL=false
-PORT=8080
-LOG_LEVEL=debug
-JWT_EXPIRES_DAY=30d
-JWT_SECRET=hexschool666
-'''
+  DB_HOST=postgres
+  DB_PORT=5432
+  DB_USERNAME=testHexschool
+  DB_PASSWORD=pgStartkit4test
+  DB_DATABASE=test
+  DB_SYNCHRONIZE=true
+  DB_ENABLE_SSL=false
+  PORT=8080
+  LOG_LEVEL=debug
+  JWT_EXPIRES_DAY=30d
+  JWT_SECRET=hexschool666
+```
 
 - 建立 docker-compose.yml 檔
-  '''
+
+```
   version: "3.8"
   volumes:
   pgData:
@@ -142,7 +144,8 @@ JWT_SECRET=hexschool666
   replicas: 1
   networks:
   bootcamp_network:
-  '''
+```
+
 - 啟動指令 - 自動建立環境並運行環境 - docker compose --env-file .env up -d
 - POSTMAN 　 API 測試 - 註冊、登入、取得個人資料
 
